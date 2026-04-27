@@ -1,0 +1,109 @@
+:root {
+    --bg: #f3f6fb;          /* soft bluish background */
+    --card: #ffffff;
+    --border: #d6dee8;
+
+    --text: #1e293b;
+    --muted: #64748b;
+
+    --primary: #6366f1;     /* soft purple */
+    --primary-hover: #4f46e5;
+
+    --accent: #f59e0b;      /* warm accent */
+
+    --correct: #22c55e;
+    --wrong: #ef4444;
+}
+
+body {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    background: linear-gradient(135deg, #f3f6fb, #e8eef7);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container */
+.container {
+    width: 420px;
+    background: var(--card);
+    padding: 28px;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+/* Title */
+h1 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: var(--primary);
+}
+
+/* Question */
+#question {
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 1.5;
+    transition: opacity 0.2s ease;
+}
+
+/* Answer buttons */
+#answers button {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: #f8fafc;
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#answers button:hover {
+    transform: translateY(-1px);
+    border-color: var(--primary);
+    background: #eef2ff;
+}
+
+/* Correct / Wrong */
+.correct {
+    background: var(--correct) !important;
+    color: white;
+}
+
+.wrong {
+    background: var(--wrong) !important;
+    color: white;
+}
+
+/* Next button */
+#nextBtn {
+    margin-top: 15px;
+    background: var(--primary);
+    border-radius: 12px;
+    padding: 12px;
+    border: none;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    display: none;
+    transition: 0.2s;
+}
+
+#nextBtn:hover {
+    background: var(--primary-hover);
+}
+
+/* Score */
+#score {
+    margin-top: 20px;
+    font-size: 18px;
+    color: var(--primary);
+}
